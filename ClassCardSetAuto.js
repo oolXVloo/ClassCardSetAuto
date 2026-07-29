@@ -2,7 +2,7 @@
  * ClassCard Auto Card Saver
  * 
  * @description Automatically creates and updates word cards on ClassCard using Fetch API.
- * @author Your Name <your.email@example.com>
+ * @oolXVloo <ltsalla0110@gmail.com>
  * @license MIT
  */
 
