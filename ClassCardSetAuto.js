@@ -10,12 +10,19 @@
 // 1. Configuration & Dummy Data
 // ============================================================================
 
-// Target ClassCard Set ID
-const SET_ID = "30029769"; 
+/**
+ * [세트 ID 설정 안내]
+ * 클래스카드 세트 페이지 URL의 맨 끝 숫자를 세트 ID로 사용합니다.
+ * 
+ * ex)
+ * - URL: https://www.classcard.net/set/123456  --> SET_ID = "123456"
+ * - URL: https://www.classcard.net/CreateWord/098765 --> SET_ID = "098765"
+ */
+const SET_ID = "YOUR_SET_ID"; 
 
 // Card Payload Structure
 const cardPayload = {
-    set_idx: SET_ID,
+    set_idx: SET_ID,        // URL 끝에서 가져온 세트 번호
     user_idx: "",           // Automatically mapped via server session
     login_user_idx: "",     // Automatically mapped via server session
     set_type: "1",
@@ -34,7 +41,7 @@ const cardPayload = {
     card_idx: ["-1", "-1", "-1"],  // '-1' indicates a new card
     deleted: ["0", "0", "0"],       // '0' = active, '1' = delete
 
-    // Default Metadata Arrays (Empty placeholders)
+    // Default Metadata Arrays (Empty placeholders matching word count)
     img_path: ["", "", ""],
     audio_path: ["", "", ""],
     external_url: ["", "", ""],
@@ -88,7 +95,7 @@ async function runNodeAutoSave() {
     const USER_PW = process.env.CLASSCARD_PW || "YOUR_PASSWORD";
 
     if (USER_ID === "YOUR_USERNAME") {
-        console.warn("⚠️ Warning: Please set your ClassCard credentials before running Node.js mode.");
+        console.warn("Warning: Please set your ClassCard credentials before running Node.js mode.");
         return;
     }
 
