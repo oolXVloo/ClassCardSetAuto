@@ -8,16 +8,16 @@
 // ========================================================
 const INPUT = {
   // 1. 세트 및 사용자 정보
-  set_idx: "30102704",
-  user_idx: "6471531",
-  login_user_idx: "6471531", // 보통 user_idx와 동일
+  set_idx: "YOUR_SET_IDX",
+  user_idx: "YOUR_USER_IDX",
+  login_user_idx: "YOUR_USER_IDX", // 보통 user_idx와 동일
 
   // 2. 쿠키 헤더 (로그인 세션 유지용)
-  cookieString: "_ga=GA1.1.810945229.1772873409; a=1; s=1; u=1; b_s_idx=7188; login_user_type=2; login_school_type=-1; r=0; auto_dic=1; study_zoom=2; ci_session=f38ac7724c7c078f4ed30e35d41b1e72f23cef4e; teacher20260801=1; u_idx=6471531; u_type=2;",
+  cookieString: "YOUR_SUPER-SECRET-COOKIE-HEADER",
 
   // 3. 카드 단어장 텍스트 (영어 \n 한글 순서)
   cardListText: `
-
+//example
 191. How long have you been studying English seriously?
 너는 얼마나 오랫동안 영어를 진지하게 공부해 왔니?
 
